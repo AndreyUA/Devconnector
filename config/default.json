@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://andrey123:andrey123@cluster0.droty.mongodb.net/MERN-devconnector?retryWrites=true&w=majority"
+}
