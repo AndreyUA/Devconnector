@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://andrey123:andrey123@cluster0.droty.mongodb.net/MERN-devconnector?retryWrites=true&w=majority",
-  "jwtSecret": "AndreyJStoken"
+  "jwtSecret": "AndreyJStoken",
+  "githubClientId": "1c68c49a3c35bb0424dc",
+  "githubSecret": "77c0a02659bdc9f898f41abc0d0140e76835c32a"
 }
