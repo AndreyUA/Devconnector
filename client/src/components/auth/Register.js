@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export default function Register() {
+import { connect } from "react-redux";
+import { setAlert } from "../../actions/alert";
+
+const Register = ({ setAlert }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,9 +22,9 @@ export default function Register() {
     e.preventDefault();
 
     if (password !== password2) {
-      console.log("Passwords do not mutch!");
+      setAlert("Passwords do not mutch!", "danger", 2000);
     } else {
-      console.log("Done");
+      setAlert("Done");
     }
   };
   return (
@@ -85,4 +89,10 @@ export default function Register() {
       </p>
     </>
   );
-}
+};
+
+Register.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+};
+
+export default connect(null, { setAlert })(Register);
