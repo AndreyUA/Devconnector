@@ -10,7 +10,7 @@ import { getProfiles } from "../../actions/profile";
 const Profiles = ({ getProfiles, profile: { loading, profiles } }) => {
   useEffect(() => {
     getProfiles();
-  }, []);
+  }, [getProfiles]);
   return (
     <>
       {loading ? (
