@@ -12,6 +12,8 @@ import CreateProfile from "./components/profile-form/CreateProfile";
 import AddExperience from "./components/profile-form/AddExperience";
 import AddEducation from "./components/profile-form/AddEducation";
 import Profiles from "./components/profiles/Profiles";
+import EditProfile from "./components/profile-form/EditProfile";
+import Profile from "./components/profile/Profile";
 import "./App.css";
 
 //redux
@@ -19,7 +21,6 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
-import EditProfile from "./components/profile-form/EditProfile";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -42,6 +43,7 @@ const App = () => {
               <Route path="/register" exact component={Register} />
               <Route path="/login" exact component={Login} />
               <Route path="/profiles" exact component={Profiles} />
+              <Route path="/profile/:id" exact component={Profile} />
               <PrivateRoute path="/dashboard" exact component={Dashboard} />
               <PrivateRoute
                 path="/create-profile"

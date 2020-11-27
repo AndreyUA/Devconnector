@@ -16,13 +16,13 @@ const ProfileItem = ({
       <img src={avatar} alt="" className="round-img" />
       <div>
         <h2>{name}</h2>
-        <p>
+        <div>
           {status} {company && <span> at {company}</span>}
           <p className="m-1">{location && <span>{location}</span>}</p>
           <Link to={`/profile/${_id}`} className="btn btn-primary">
             View Profile
           </Link>
-        </p>
+        </div>
       </div>
       <ul>
         {skills.slice(0, 4).map((item, index) => (
