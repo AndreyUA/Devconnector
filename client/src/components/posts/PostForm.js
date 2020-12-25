@@ -9,7 +9,7 @@ const PostFrom = ({ addPost }) => {
   return (
     <div className="post-form">
       <div className="bg-primary p">
-        <h3>Leave A Comment</h3>
+        <h3>Say something...</h3>
       </div>
       <form
         onSubmit={(e) => {
@@ -24,7 +24,7 @@ const PostFrom = ({ addPost }) => {
           name="text"
           cols="30"
           rows="5"
-          placeholder="Comment on this post"
+          placeholder="Create a post"
           required
           value={text}
         ></textarea>

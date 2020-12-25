@@ -7,6 +7,7 @@ import PostItem from "../posts/PostItem";
 
 import { connect } from "react-redux";
 import { getPost } from "../../actions/post";
+import CommentForm from "./CommentForm";
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
         Back to Posts
       </Link>
       <PostItem post={post} showActions={false} />
+      <CommentForm postId={post._id} />
     </>
   );
 };
